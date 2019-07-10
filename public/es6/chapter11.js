@@ -23,7 +23,7 @@ try{
 
 //에러일으키기 - 에러를 일으켜서 예외처리작업을 할 수 있다.
 function billPay(amount, payee, account){
-    if(amount ? account.balance){
+    if(amount > account.balance){
         throw new Error('insufficient funds');
     }
     account.transfer(payee, amount);
